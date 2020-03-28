@@ -19,3 +19,7 @@
 <!-- 显示特殊的符号字符串 -->
 <text decode>&lt; &gt;</text>
 </view>
+<!-- view组件的基本使用 -->
+<view style="width: 400px; height: 400px" hover-class="hc2">
+  <view style="width: 200px; height: 200px" hover-class="hc1" hover-start-time="1000" hover-stay-time="1000" hover-stop-propagation="true">试一试view组件的基本用法</view>
+</view>

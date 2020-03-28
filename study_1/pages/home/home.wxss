@@ -1,1 +1,7 @@
 /* pages/home/home.wxss */
+.hc1 {
+  background-color: blue;
+}
+.hc2 {
+  background-color: red;
+}
