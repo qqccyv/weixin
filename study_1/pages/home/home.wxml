@@ -1,2 +1,21 @@
 <!--pages/home/home.wxml-->
-<text>这里是home主页</text>
+<view>
+<!-- 是否可以被选中 -->
+<text selectable>这里是home主页</text>
+</view>
+<view>
+<!-- 保留英文格式长度的空格 -->
+<text space="ensp">这里是     home主页</text>
+</view>
+<view>
+<!-- 保留中文格式长度的空格 -->
+<text space="emsp">1    2</text>
+</view>
+<view>
+<!-- 保留当前字体长度的空格 -->
+<text space="nbsp" style="font-size: 60px">1    2</text>
+</view>
+<view>
+<!-- 显示特殊的符号字符串 -->
+<text decode>&lt; &gt;</text>
+</view>
