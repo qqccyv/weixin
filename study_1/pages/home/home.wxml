@@ -1,7 +1,7 @@
 <!--pages/home/home.wxml-->
 <view>
 <!-- 是否可以被选中 -->
-<text selectable>这里是home主页</text>
+<text selectable style="font-size: 40px">这里是属于田老师的专属主页</text>
 </view>
 <view>
 <!-- 保留英文格式长度的空格 -->
@@ -13,13 +13,31 @@
 </view>
 <view>
 <!-- 保留当前字体长度的空格 -->
-<text space="nbsp" style="font-size: 60px">1    2</text>
+<text space="nbsp">汉    字</text>
 </view>
 <view>
 <!-- 显示特殊的符号字符串 -->
 <text decode>&lt; &gt;</text>
 </view>
 <!-- view组件的基本使用 -->
-<view style="width: 400px; height: 400px" hover-class="hc2">
+<!-- <view style="width: 400px; height: 400px" hover-class="hc2">
   <view style="width: 200px; height: 200px" hover-class="hc1" hover-start-time="1000" hover-stay-time="1000" hover-stop-propagation="true">试一试view组件的基本用法</view>
-</view>
+</view> -->
+
+<!-- 按钮组件的基本使用 -->
+<button type="primary" size="default">主要按钮</button>
+<!-- size设定为mini后，按钮就变为行内块元素 -->
+<button type="warn" size="mini">按钮</button>
+<button type="warn" size="mini" plain>按钮</button>
+<button type="warn" size="mini" plain disabled>按钮</button>
+<button type="warn" size="mini" plain loading>按钮</button>
+
+<!-- 输入框组件的基本使用 -->
+<input value="请输入用户名"></input>
+<input placeholder="请输入密码" password type="number"></input>
+<input type="digit" placeholder="带小数点的输入框"></input>
+<input type="idcard" placeholder="请输入身份证号" cursor-spacing="100"></input>
+<!-- 图片组件的基本使用 -->
+<image mode="aspectFit" src="https://wow.nosdn.127.net/1/landing/classic/landing-bg-20200220.jpg"></image>
+<image mode="scaleToFill" src="https://wow.nosdn.127.net/1/landing/classic/landing-bg-20200220.jpg"></image>
+<image mode="aspectFill" src="https://wow.nosdn.127.net/1/landing/classic/landing-bg-20200220.jpg"></image>
