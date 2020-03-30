@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "index页面",
+  "navigationBarBackgroundColor": "#62FBFA",
+  "navigationBarTextStyle": "white"
 }

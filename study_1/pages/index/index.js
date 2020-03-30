@@ -13,6 +13,10 @@ Page({
     })
     
   },
+  btn(e){
+    console.log(e.target.dataset.info);
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
