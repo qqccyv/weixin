@@ -17,15 +17,21 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "assets/images/home1.png",
+      "selectedIconPath": "assets/images/home.png"
       },
       {
       "pagePath": "pages/main/add/add",
-      "text": "添加"
+      "text": "添加",
+      "iconPath": "assets/images/addto1.png",
+    "selectedIconPath": "assets/images/addto.png"
     },
       {
       "pagePath": "pages/main/completed/completed",
-      "text": "已完成"
+      "text": "已完成",
+      "iconPath": "assets/images/selection1.png",
+    "selectedIconPath": "assets/images/selection.png"
     }
   ]
   },
