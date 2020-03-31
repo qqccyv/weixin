@@ -1,0 +1,14 @@
+/**index.wxss**/
+@import "../../assets/wxss/common.wxss";
+page {
+  background-color: #75B79E;
+}
+.action {
+  display: flex;
+  justify-content:flex-end;
+  }
+  .btn {
+    margin: 0;
+    width: 30% !important;
+    border-radius: 30rpx;
+  }

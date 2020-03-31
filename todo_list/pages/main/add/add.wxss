@@ -1,0 +1,13 @@
+/* pages/main/add/add.wxss */
+@import "../../../assets/wxss/common.wxss";
+
+page {
+  background-color: #6A8CAF;
+}
+.btn {
+  border-radius: 40rpx;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 20rpx;
+  font-weight: 400;
+}

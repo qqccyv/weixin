@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/main/add/add",
+    "pages/main/completed/completed",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#75B79E",
+    "navigationBarTitleText": "超级任务",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#75B79E"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+      "pagePath": "pages/main/add/add",
+      "text": "添加"
+    },
+      {
+      "pagePath": "pages/main/completed/completed",
+      "text": "已完成"
+    }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

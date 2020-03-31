@@ -1,0 +1,10 @@
+<!--pages/main/add/add.wxml-->
+<view class="task">
+<textarea placeholder="请输入内容" selectable></textarea>
+</view>
+<view class="task">
+<input placeholder="请输入备注" selectable></input>
+</view>
+<view>
+<button class="btn">添加</button>
+</view>
