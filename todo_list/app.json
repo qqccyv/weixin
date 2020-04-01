@@ -1,15 +1,14 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/main/add/add",
-    "pages/main/completed/completed",
-    "pages/index/index"
+    "pages/main/completed/completed"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#75B79E",
     "navigationBarTitleText": "超级任务",
     "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": true,
     "backgroundColor": "#75B79E"
   },
   "tabBar": {

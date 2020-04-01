@@ -1,9 +1,17 @@
+<wxs module="filter" src="../../utils/filter.wxs"></wxs>
 <!--index.wxml-->
-<view class="task">
-<text>时间</text>
-<text class="content" selectable>任务</text>
-<text selectable>描述</text>
+<view class="task" wx:for="{{taskList}}" wx:key="id"  wx:if="{{!item.completed}}">
+<text>{{filter.formatTime(item.createTime, 'yyyy-MM-dd')}}</text>
+<text class="content" selectable>
+{{item.taskValue}}
+</text>
+<text selectable>
+{{item.remarkValue}}
+</text>
 <view class="action">
-<button size="mini" type="primary" class="btn">完成</button>
+<button size="mini" type="primary" class="btn" data-id="{{item.id}}" bindtap="accomplish">完成</button>
 </view>
+</view>
+<view class="task" hidden="{{unCompletedTask.length !== 0}}">
+暂时没有未完成的任务
 </view>

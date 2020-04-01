@@ -9,7 +9,8 @@ Page({
     list: [{id:1,name:'zs'}],
     list2: new Array(300).fill(1),
     arr: [1,2,3,4,5,6,7,8,9,10],
-    page: 1
+    page: 1,
+    flag: false
   },
   // iptHandler({detail: {value}}){
   //   this.setData({
@@ -95,7 +96,19 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function (obj) {
+    console.log(obj);
+    return {
+      title: '您中奖啦！！',
+      path: 'pages/index/index',
+      imageUrl: 'http://2a.zol-img.com.cn/product/120_500x2000/684/ceY4RmEcWo3cs.jpg'
+    }
     
+  },
+  onPageScroll(obj){
+    console.log(obj);
+    this.setData({
+      flag: obj.scrollTop > 200
+    })
   }
 })
