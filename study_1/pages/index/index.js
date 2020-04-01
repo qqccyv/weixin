@@ -4,18 +4,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-    iptValue: '输入点什么吧'
+    iptValue: '输入点什么吧',
+    height: 180,
+    list: [{id:1,name:'zs'}],
+    list2: new Array(300).fill(1)
   },
-  iptHandler({detail: {value}}){
-    // console.log(value);
-    this.setData({
-      iptValue: value
-    })
+  // iptHandler({detail: {value}}){
+  //   this.setData({
+  //     iptValue: value
+  //   })
     
+  // },
+  iptHandler({detail:{value},currentTarget}){
+  //  console.log(e);
+    const name = currentTarget.dataset.name
+    this.setData({
+      [name] : value
+    })
   },
   btn(e){
     console.log(e.target.dataset.info);
     
+  },
+  add(){
+    const{list:[...list],height} = this.data
+    this.setData({
+      list: [{id:list.length,name:height},...list]
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -56,7 +71,11 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+    // console.log("我刷新了");
+    this.setData({
+      height: 150
+    })
+    wx.stopPullDownRefresh()
   },
 
   /**

@@ -1,6 +1,14 @@
 <!--index.wxml-->
 <view>
 <text selectable>{{iptValue}}</text>
-<input type="text" bindinput="iptHandler" value="{{iptValue}}"></input>
+<input type="text" bindinput="iptHandler" value="{{height}}" data-name="height"></input>
 <button bindtap="btn" type="primary" data-info="信息">随便按一按吧</button>
 </view>
+<text wx:if="{{height>=180}}">高</text>
+<text wx:elif="{{height>=170 && height<180}}">一般</text>
+<text wx:else>矮</text>
+
+<button bindtap="btnHandler">触发下拉刷新按钮</button>
+
+<button bindtap="add">增加列表</button>
+<view wx:for="{{list}}" wx:key="id">{{item.name}}{{item.id}}</view>
