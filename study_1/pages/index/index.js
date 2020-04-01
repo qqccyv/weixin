@@ -7,7 +7,9 @@ Page({
     iptValue: '输入点什么吧',
     height: 180,
     list: [{id:1,name:'zs'}],
-    list2: new Array(300).fill(1)
+    list2: new Array(300).fill(1),
+    arr: [1,2,3,4,5,6,7,8,9,10],
+    page: 1
   },
   // iptHandler({detail: {value}}){
   //   this.setData({
@@ -82,7 +84,12 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    const {arr,page} = this.data
+    let newArr = new Array(10).fill().map((item,i)=>{return item=page*10 + i +1})
+    this.setData({
+      arr: arr.concat(...newArr),
+      page: page+1
+    })
   },
 
   /**
