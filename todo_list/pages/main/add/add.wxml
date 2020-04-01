@@ -1,9 +1,9 @@
 <!--pages/main/add/add.wxml-->
 <view class="task">
-<textarea placeholder="请输入内容" selectable bindinput="taskInput"></textarea>
+<textarea placeholder="请输入内容" selectable bindinput="taskInput" value="{{taskValue}}"></textarea>
 </view>
 <view class="task">
-<input placeholder="请输入备注" selectable bindinput="remarkInput"></input>
+<input placeholder="请输入备注" selectable bindinput="remarkInput" value="{{remarkValue}}"></input>
 </view>
 <view>
 <button class="btn" bindtap="add">添加</button>
