@@ -1,19 +1,54 @@
-// pages/home/home.js
+// pages/sub/sub.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    count: 0
   },
-
+  btnHandler(){
+   this.setData({
+    count: this.data.count +1
+   }) 
+  },
+  goBack(){
+    wx.navigateBack({
+      delta: 1
+    })
+  },
+  btnGetHandler(){
+    wx.request({
+      url: 'https://www.liulongbin.top:8082/api/get',
+      data: {
+        name: 'dengyu',
+        age: 30
+      },
+      success(result){
+        console.log(result);
+        
+      }
+    })
+  },
+  btnPostHandler(){
+    wx.request({
+      url: 'https://www.liulongbin.top:8082/api/post',
+      method: 'post',
+      data: {
+        name: 'dengyu',
+        age: 30
+      },
+      success(result){
+        console.log(result);
+        
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     console.log(options);
-    
   },
 
   /**

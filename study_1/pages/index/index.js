@@ -18,6 +18,16 @@ Page({
   //   })
     
   // },
+  goSub(){
+    wx.navigateTo({
+      url: '/pages/sub/sub?name=xiaoming',
+    })
+  },
+  goHome(){
+    wx.switchTab({
+      url: '/pages/home/home?name=xiaoming',
+    })
+  },
   iptHandler({detail:{value},currentTarget}){
   //  console.log(e);
     const name = currentTarget.dataset.name

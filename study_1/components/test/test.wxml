@@ -1,0 +1,7 @@
+<!--components/test/test.wxml-->
+<view class="ipt">
+<button bindtap="btnhandler">点击改变test中的value的值</button>
+<input type="text" value="{{value}}" ></input>
+<view>这里是外部传入test组件的count：{{propCount}}</view>
+</view>
+
