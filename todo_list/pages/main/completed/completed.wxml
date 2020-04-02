@@ -1,6 +1,6 @@
 <wxs module="filter" src="../../../utils/filter.wxs"></wxs>
 <!--pages/main/completed/completed.wxml-->
-<view class="task" wx:for="{{taskList}}" wx:key="id"  wx:if="{{item.completed}}">
+<view class="task" wx:for="{{completedTask}}" wx:key="id">
 <text>{{filter.formatTime(item.createTime, 'yyyy-MM-dd')}}</text>
 <text class="content" selectable>
 {{item.taskValue}}</text>
