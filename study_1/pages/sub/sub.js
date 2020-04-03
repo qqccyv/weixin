@@ -7,10 +7,17 @@ Page({
   data: {
     count: 0
   },
+  getValue(e){
+    console.log(e);
+    
+  },
   btnHandler(){
    this.setData({
     count: this.data.count +1
    }) 
+   let component = this.selectComponent('.componentTest')
+   console.log(component);
+   
   },
   goBack(){
     wx.navigateBack({

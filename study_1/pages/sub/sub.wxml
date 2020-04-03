@@ -3,7 +3,7 @@
 <navigator open-type="navigateBack" delta="1">返回上一页</navigator>
 <button bindtap="goBack">返回上一页</button>
 
-<test-com prop-count="{{count}}"> <text slot="footer">这里是test的插槽</text><text>这里是test的默认插槽</text></test-com>
+<test-com prop-count="{{count}}" class="componentTest" bind:subevent="getValue"> <text slot="footer">这里是test的插槽</text><text>这里是test的默认插槽</text></test-com>
 
 <button bindtap="btnHandler">这里是sub页面的按钮，控制count传入组件改变</button>
 

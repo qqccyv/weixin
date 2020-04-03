@@ -29,6 +29,9 @@ Component({
       this.setData({
         value: this.data.value +1
       })
+      this.triggerEvent('subevent',{
+        value: this.data.value
+      })
     }
   }
 })
