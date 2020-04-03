@@ -6,7 +6,9 @@ Component({
   properties: {
     propCount: Number
   },
-
+  options: {
+    multipleSlots: true
+  },
   /**
    * 组件的初始数据
    */
