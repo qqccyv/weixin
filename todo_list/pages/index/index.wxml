@@ -1,17 +1,17 @@
 <wxs module="filter" src="../../utils/filter.wxs"></wxs>
 <!--index.wxml-->
 <view class="task" wx:for="{{unCompletedTask}}" wx:key="id">
-<text>{{filter.formatTime(item.createTime, 'yyyy-MM-dd')}}</text>
-<text class="content" selectable>
-{{item.taskValue}}
-</text>
-<text selectable>
-{{item.remarkValue}}
-</text>
-<view class="action">
-<button size="mini" type="primary" class="btn" data-id="{{item.id}}" bindtap="accomplish">完成</button>
-</view>
+	<text>{{filter.formatTime(item.createTime, 'yyyy-MM-dd')}}</text>
+	<text class="content" selectable>
+	{{item.taskValue}}
+	</text>
+	<text selectable>
+	{{item.remarkValue}}
+	</text>
+	<view class="action">
+		<button size="mini" type="primary" class="btn" data-id="{{item.id}}" bindtap="accomplish">完成</button>
+	</view>
 </view>
 <view class="task" hidden="{{unCompletedTask.length !== 0}}">
-暂时没有未完成的任务
+	暂时没有未完成的任务
 </view>

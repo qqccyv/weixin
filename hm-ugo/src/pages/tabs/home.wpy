@@ -1,0 +1,64 @@
+<template>
+  <view>
+    <!-- 轮播图 -->
+    <swiper indicator-dots circular>
+      <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+        <navigator  url="{{item.navigator_url}}" open-type="{{item.open_type}}">
+        <image src="{{item.image_src}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+    <!-- 首页分类列表 -->
+    <view class="cateList">
+      <block wx:for="{{cateList}}" wx:key="index">
+        <navigator wx:if="{{item.navigator_url}}" url="/pages/tabs/cates" open-type="{{item.open_type}}">
+          <image src="{{item.image_src}}"></image>
+        </navigator>
+        <image wx:else src="{{item.image_src}}"></image>
+      </block>
+    </view>
+    <!-- 楼层区域 -->
+    <view class="floor">
+      <view wx:for="{{floorList}}" wx:key="index" class="floor-item">
+        <image src="{{item.floor_title.image_src}}"></image>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+import mixin from '@/mixins/tabs/home'
+export default class extends wepy.page {
+    mixins = [mixin]
+}
+</script>
+
+<style lang="less">
+swiper {
+  height: 340rpx;
+  navigator,
+  image {
+    height: 100%;
+    width: 100%;
+  }
+}
+.cateList {
+  display: flex;
+  justify-content: space-around;
+  margin: 40rpx 0;
+  image {
+    width: 128rpx;
+    height: 140rpx;
+  }
+}
+.floor{
+  .floor-item {
+    image {
+      display: block;
+      width: 750rpx;
+      height: 59rpx;
+    }
+  }
+}
+</style>

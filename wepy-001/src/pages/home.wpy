@@ -1,0 +1,28 @@
+<template>
+ <view>首页
+   <button @tab="countChange">点击改变count:{{count}}</button>
+ </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Home extends wepy.page {
+  config = {
+    navigationBarTitleText : '首页'
+  }
+  data = {
+    count : 0
+  }
+  method = {
+    countChange(){
+      console.log(this.count);
+      
+     this.count =  this.count + 1
+    }
+  }
+}
+</script>
+
+<style lang="less">
+  
+</style>

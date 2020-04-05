@@ -5,43 +5,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-    taskValue:'',
+    taskValue: '',
     remarkValue: ''
   },
   // 同步页面任务信息和备注信息
-  taskInput({detail: {value}}){
+  taskInput({ detail: { value } }) {
     // console.log(e);
     this.setData({
       taskValue: value
     })
     // console.log(this.data.taskValue);
-    
+
   },
-  remarkInput({detail: {value}}){
+  remarkInput({ detail: { value } }) {
     this.setData({
       remarkValue: value
     })
   },
   // 添加任务信息
-  add(){
-    const {taskValue,remarkValue} = this.data
-   var taskList = wx.getStorageSync("taskList")? wx.getStorageSync("taskList"):[]
-  //  console.log(taskList);
-  taskList.unshift({
-    id: taskList[0]? taskList[0].id+1:0,
-    taskValue: taskValue,
-    remarkValue: remarkValue,
-    createTime:  new Date().toString(),
-    completed: false
-  })
-  wx.setStorage({//存储到本地
-    key:"taskList",
-    data:taskList
-  })  
-   this.setData({
-    taskValue:'',
-    remarkValue: ''
-   })
+  add() {
+    const { taskValue, remarkValue } = this.data
+    var taskList = wx.getStorageSync("taskList") ? wx.getStorageSync("taskList") : []
+    //  console.log(taskList);
+    taskList.unshift({
+      id: taskList[0] ? taskList[0].id + 1 : 0,
+      taskValue: taskValue,
+      remarkValue: remarkValue,
+      createTime: new Date().toString(),
+      completed: false
+    })
+    wx.setStorage({//存储到本地
+      key: "taskList",
+      data: taskList
+    })
+    this.setData({
+      taskValue: '',
+      remarkValue: ''
+    })
     // wx.setStorageSync("taskList", value)
   },
   /**

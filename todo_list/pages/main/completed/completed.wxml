@@ -1,15 +1,15 @@
 <wxs module="filter" src="../../../utils/filter.wxs"></wxs>
 <!--pages/main/completed/completed.wxml-->
 <view class="task" wx:for="{{completedTask}}" wx:key="id">
-<text>{{filter.formatTime(item.createTime, 'yyyy-MM-dd')}}</text>
-<text class="content" selectable>
-{{item.taskValue}}</text>
-<text>{{item.remarkValue}}</text>
-<view class="action">
-<button size="mini" type="primary" class="btn" data-id="{{item.id}}" bindtap="unAccomplish">未完成</button>
-<button size="mini" type="warn" class="btn" data-id="{{item.id}}" bindtap="deletedTask">删 除</button>
-</view>
+	<text>{{filter.formatTime(item.createTime, 'yyyy-MM-dd')}}</text>
+	<text class="content" selectable>
+	{{item.taskValue}}</text>
+	<text>{{item.remarkValue}}</text>
+	<view class="action">
+		<button size="mini" type="primary" class="btn" data-id="{{item.id}}" bindtap="unAccomplish">未完成</button>
+		<button size="mini" type="warn" class="btn" data-id="{{item.id}}" bindtap="deletedTask">删 除</button>
+	</view>
 </view>
 <view class="task" hidden="{{completedTask.length !== 0}}">
-暂时没有已完成的任务
+	暂时没有已完成的任务
 </view>
