@@ -1,16 +1,32 @@
 <template>
- <view>
-   搜索页面
- </view>
+    <view>
+        <!-- 搜索条 -->
+        <van-search
+            value="{{ value }}"
+            placeholder="请输入搜索关键词"
+            show-action
+            bind:change="onChange"
+            bind:search="onSearch"
+            bind:cancel="onCancel"
+        />
+
+        <!-- 建议列表 -->
+        <van-cell-group>
+            <van-cell wx:for="{{suggestList}}" wx:key="index" title="{{item.goods_name}}" bind:click="goGoodsDetail({{item.goods_id}})"/>
+        </van-cell-group>
+    </view>
 </template>
 
 <script>
-import wepy from 'wepy'
+import wepy from 'wepy';
+import mix from '@/mixins/tabs/search';
+
 export default class extends wepy.page {
-  
+    config = {};
+
+    mixins = [mix];
 }
 </script>
 
 <style lang="less">
-  
 </style>
