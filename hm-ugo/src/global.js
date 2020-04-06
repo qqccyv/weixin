@@ -2,9 +2,9 @@ import wepy from 'wepy'
 
 const BASE_URL = 'https://www.zhengzhicheng.cn/api/public/v1'
 
-wepy.$toast = (message='获取数据失败！',isIcon=false)=> wepy.showToast({
+wepy.$toast = (message = '获取数据失败！', isIcon = false) => wepy.showToast({
   title: message,
-  icon: isIcon? 'succes': 'none',
+  icon: isIcon ? 'succes' : 'none',
   duration: 1500
 })
 

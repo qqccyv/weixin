@@ -8,7 +8,19 @@ import 'wepy-async-function'
 import './global.js'
 export default class extends wepy.app {
   config = {
-    pages: ['pages/tabs/home','pages/tabs/cates','pages/tabs/search','pages/tabs/cart','pages/tabs/me','pages/goods_detail/main'],
+    pages: ['pages/tabs/home','pages/tabs/cates','pages/tabs/search','pages/tabs/cart','pages/tabs/me','pages/goods_detail/main','pages/goods_list'],
+    usingComponents: {
+      'van-badge': '/vendor/vant/badge/index',
+      'van-badge-group': '/vendor/vant/badge-group/index',
+       // Grid 布局组件（Layout）
+      'van-row': '/vendor/vant/row/index',
+      'van-col': '/vendor/vant/col/index',
+      // 搜索框。
+      'van-search': '/vendor/vant/search/index',
+      // 单元格组件。
+      'van-cell': '/vendor/vant/cell/index',
+      'van-cell-group': '/vendor/vant/cell-group/index'
+    },
     window: {
       backgroundTextStyle: 'dark',
       navigationBarBackgroundColor: '#E72F02',
@@ -55,6 +67,41 @@ export default class extends wepy.app {
     super()
     this.use('requestfix')
     this.use('promisify')
+   this.setupIntercept()
+  }
+
+  setupIntercept(){
+     //拦截request请求
+        this.intercept('request', {
+            // 发出请求时的回调函数
+            config (p) {
+                wepy.showLoading({
+                  title: '加载中..',
+                  mask: true
+                })
+                // 必须返回OBJECT参数对象，否则无法发送请求到服务端
+                return p;
+            },
+
+            // 请求成功后的回调函数
+            success (p) {
+                // 可以在这里对收到的响应数据对象进行加工处理
+                // 必须返回响应数据对象，否则后续无法对响应数据进行处理
+                return p;
+            },
+
+            //请求失败后的回调函数
+            fail (p) {
+                console.log('request fail: ', p);
+                // 必须返回响应数据对象，否则后续无法对响应数据进行处理
+                return p;
+            },
+
+            // 请求完成时的回调函数(请求成功或失败都会被执行)
+            complete (p) {
+                wepy.hideLoading()
+            }
+        });
   }
 
   onLaunch() {
