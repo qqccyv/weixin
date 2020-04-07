@@ -1,4 +1,13 @@
 {
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小程序",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+
+  }
   "tabBar": {
     "selectedColor": "#000000"
     "list": [{

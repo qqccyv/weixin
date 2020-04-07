@@ -12,7 +12,13 @@ export default class extends wepy.mixin {
     onChange({detail}){
       console.log(detail);
       this.top = !this.top
-    }
+    },
+     //跳转产品列表页面
+  goGoodsList(id){
+    wepy.navigateTo({
+      url: '/pages/goods_list?cid=' + id
+    })
+  }
   }
 
   computed= {
@@ -27,12 +33,7 @@ export default class extends wepy.mixin {
     this.getWindowHeight()
   }
 
-  //跳转产品列表页面
-  goGoodsList(id){
-    wepy.navigateTo({
-      url: '/pages/goods_list?cid=' + id
-    })
-  }
+ 
 
   // 获取运行设备视图高度
   getWindowHeight(){

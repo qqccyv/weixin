@@ -14,6 +14,16 @@
         <van-cell-group>
             <van-cell wx:for="{{suggestList}}" wx:key="index" title="{{item.goods_name}}" bind:click="goGoodsDetail({{item.goods_id}})"/>
         </van-cell-group>
+        <!-- 历史记录 -->
+        <view hidden="{{value}}">
+          <view class="historyTitle">
+            <text>历史记录</text>
+            <van-icon name="delete" @tap="clearHistory"/>
+          </view>
+          <view class="searchList">
+            <van-tag wx:for="{{searchList}}" wx:key="index" @tap="goGoodsList({{item}})">{{item}}</van-tag>
+          </view>
+        </view>
     </view>
 </template>
 
@@ -29,4 +39,17 @@ export default class extends wepy.page {
 </script>
 
 <style lang="less">
+.historyTitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  text:nth-child(1){
+    font-weight: bold;
+  }
+}
+.searchList {
+  .van-tag {
+    margin: 30rpx;
+  }
+}
 </style>

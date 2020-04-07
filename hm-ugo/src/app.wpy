@@ -19,13 +19,17 @@ export default class extends wepy.app {
       'van-search': '/vendor/vant/search/index',
       // 单元格组件。
       'van-cell': '/vendor/vant/cell/index',
-      'van-cell-group': '/vendor/vant/cell-group/index'
+      'van-cell-group': '/vendor/vant/cell-group/index',
+      "van-icon": "/vendor/vant/icon/index",
+      "van-tag": "/vendor/vant/tag/index",
+      "van-card": "/vendor/vant/card/index"
     },
     window: {
       backgroundTextStyle: 'dark',
       navigationBarBackgroundColor: '#E72F02',
       navigationBarTitleText: '优购',
-      navigationBarTextStyle: 'white'
+      navigationBarTextStyle: 'white',
+      enablePullDownRefresh: true
     },
     tabBar : {
       selectedColor: '#D81E06',
