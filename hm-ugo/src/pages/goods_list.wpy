@@ -1,6 +1,6 @@
 <template>
   <view>
-    <van-card wx:for="{{goodsList}}" wx:key="goods_id" num="{{item.goods_number}}" price="{{item.goods_price}}" title="{{item.goods_name}}" thumb="{{ item.goods_small_logo }}" />
+    <van-card @tap="goGoodsDetail({{item.goods_id}})" wx:for="{{goodsList}}" wx:key="goods_id" num="{{item.goods_number}}" price="{{item.goods_price}}" title="{{item.goods_name}}" thumb="{{ item.goods_small_logo }}" />
     <view class="show" hidden="{{canLoading}}">没有更多了</view>
   </view>
 </template>
@@ -10,7 +10,9 @@ import wepy from 'wepy'
 import mixin from '@/mixins/goods_list'
 export default class extends wepy.page {
   config={
-    navigationBarTitleText: '商品列表'
+    navigationBarTitleText: '商品列表',
+    backgroundColor: "#eeeeee",
+    enablePullDownRefresh: true
   }
   mixins=[mixin]
 }

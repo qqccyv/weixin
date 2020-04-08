@@ -22,14 +22,15 @@ export default class extends wepy.app {
       'van-cell-group': '/vendor/vant/cell-group/index',
       "van-icon": "/vendor/vant/icon/index",
       "van-tag": "/vendor/vant/tag/index",
-      "van-card": "/vendor/vant/card/index"
+      "van-card": "/vendor/vant/card/index",
+      'van-tab': '/vendor/vant/tab/index',
+      'van-tabs': '/vendor/vant/tabs/index'
     },
     window: {
       backgroundTextStyle: 'dark',
       navigationBarBackgroundColor: '#E72F02',
       navigationBarTitleText: '优购',
       navigationBarTextStyle: 'white',
-      enablePullDownRefresh: true
     },
     tabBar : {
       selectedColor: '#D81E06',
