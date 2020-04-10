@@ -22,7 +22,7 @@ Storage.prototype.$get = function (key, defaultValue = {}) {
 }
 
 
-// localStorage.$set('userInfo',data)
-// sessionStorage.$set('userInfo',data)
+localStorage.$set('userInfo',data)
+sessionStorage.$set('userInfo',data)
 const newData = localStorage.$get('userInfo')
 console.log(newData);
