@@ -11,6 +11,12 @@ export default class extends wepy.mixin {
     methods = {
         changeSize({ detail: { value } }) {
             this.sizeIndex = value;
+        },
+       async getUserInfo(res){
+            console.log(res);
+        const data = await wepy.login()
+        console.log(data);
+        
         }
     };
 

@@ -1,0 +1,31 @@
+<!--pages/home/home.wxml-->
+<!-- 预览部分 -->
+<view class="preview" wx:if="{{url}}" >
+<image src="{{url}}" mode="aspectFill" style="height: {{wh}}px;"></image>
+ <view class="face-info" wx:if="{{faceInfo}}">
+        <!-- 第一行 -->
+        <view class="face-row">
+            <view class="face-col">年龄：{{faceInfo.age}}</view>
+            <view class="face-col">颜值：{{faceInfo.beauty}}</view>
+        </view>
+        <!-- 第二行 -->
+        <view class="face-row">
+            <view class="face-col">表情：{{mapper.exp[faceInfo.expression.type]}}</view>
+            <view class="face-col">性别：{{mapper.sex[faceInfo.gender.type]}}</view>
+        </view>
+        <!-- 第三行 -->
+        <view class="face-row">
+            <view class="face-col">眼镜：{{mapper.gla[faceInfo.glasses.type]}}</view>
+            <view class="face-col">情绪：{{mapper.emo[faceInfo.emotion.type]}}</view>
+        </view>
+    </view>
+<view hover-class="hover" class="reChoose" bindtap="reChoose">重选照片</view>
+</view>
+<!-- 照相机组件 -->
+<camera wx:else style="height: {{wh}}px; width: 100%;" flash="off" device-position="{{isFont? 'front':'back'}}">
+<cover-view class="action">
+<cover-image src="../../assets/images/md-reverse-camera.png" bindtap="changeShot"></cover-image>
+<cover-image src="../../assets/images/paizhao.png" bindtap="takeAPhotoshop"></cover-image>
+<cover-image src="../../assets/images/tupian.png" bindtap="choosePic"></cover-image>
+</cover-view>
+</camera>

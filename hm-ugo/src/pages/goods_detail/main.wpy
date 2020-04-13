@@ -45,7 +45,10 @@
         <!-- 商品详细信息 -->
         <view>
             <van-tabs active="{{ active }}" bind:change="onChange">
-                <van-tab title="商品详情">内容 1</van-tab>
+                <van-tab title="商品详情">
+                    内容 1
+                    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录信息</button>
+                </van-tab>
                 <van-tab title="规格参数">内容 2</van-tab>
             </van-tabs>
         </view>

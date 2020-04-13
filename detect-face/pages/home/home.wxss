@@ -1,0 +1,60 @@
+/* pages/home/home.wxss */
+.action {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 100rpx;
+}
+
+.action cover-image {
+  width: 120rpx;
+}
+
+.preview  {
+  background-color: #000;
+}
+.preview image {
+  display: block;
+  width: 750rpx;
+}
+
+.reChoose {
+  position: fixed;
+  bottom: 100rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  padding:20rpx 40rpx;
+  border: 2px solid #fff;
+  border-radius: 40rpx;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 2px #000;
+  box-shadow: 0 0 15px -5px #000;
+}
+
+.re-choose view.hover {
+  background-color: rgba(255,255,255,.5);
+}
+
+/* 颜值信息框 */
+.face-info {
+  box-sizing: border-box;
+  padding: 20px 10px 0 10px;
+  position: absolute;
+  left: 35rpx;
+  width: 680rpx;
+  border-radius: 35rpx;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #fff;
+  background-color: rgba(255,255,255,.18);
+  text-shadow: 0 0 2px #000;
+}
+
+.face-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
